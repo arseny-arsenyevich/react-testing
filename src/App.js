@@ -3,6 +3,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import AboutPage from "./pages/AboutPage";
 import ErrorPage from "./pages/ErrorPage";
+import HelloWorld from "./pages/HelloWorld";
 
 function V() {
 	const [state, setState] = useState(1);
@@ -65,13 +66,19 @@ function App() {
 			<h1 data-testid="input-h1">{value}</h1>
 			<button data-testid="toggle-btn" onClick={onClick}>click me</button>
 			<input data-testid="input" type="text" placeholder="input" value={value} onChange={e => setValue(e.target.value)} />
-			<Link to="/" data-testid="main-link">
-				main
-			</Link>
-			<Link to="/about" data-testid="about-link">
-				about
-			</Link>
+			<div style={{ display: "flex", flexDirection: "column" }}>
+				<Link to="/" data-testid="main-link">
+					main
+				</Link>
+				<Link to="/about" data-testid="about-link">
+					about
+				</Link>
+				<Link to="/hello" data-testid="about-link">
+					hello
+				</Link>
+			</div>
 			<Routes>
+				<Route path="/hello" Component={HelloWorld} />
 				<Route path="/" Component={MainPage} />
 				<Route path="/about" Component={AboutPage} />
 				<Route path="/*" Component={ErrorPage} />

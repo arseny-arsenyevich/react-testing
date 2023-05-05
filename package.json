@@ -22,7 +22,8 @@
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "wdio": "wdio run ./wdio.conf.js"
+    "wdio": "wdio run ./wdio.conf.js",
+    "chromatic": "npx chromatic --project-token=87337e3f877d"
   },
   "eslintConfig": {
     "extends": [
@@ -81,5 +82,7 @@
     "storybook": "^7.0.7",
     "wdio-chromedriver-service": "^8.1.1",
     "webpack": "^5.81.0"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "react-testing-treaning@0.1.0"
 }
