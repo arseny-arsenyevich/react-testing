@@ -73,7 +73,7 @@ function App() {
 				<Link to="/about" data-testid="about-link">
 					about
 				</Link>
-				<Link to="/hello" data-testid="about-link">
+				<Link to="/hello" data-testid="hello-link">
 					hello
 				</Link>
 			</div>
